@@ -29,7 +29,7 @@ public class Cliente implements Serializable{
 	//private TipoCliente tipo; 
 	private Integer tipo; //receberá um numero inteiro
 	
-	@OneToMany(mappedBy="cliente")
+		@OneToMany(mappedBy="cliente")
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	// SET é um conjunto onde não pode haver repetições

@@ -11,7 +11,7 @@ import com.nelioalves.cursomc.domain.Cliente;
 import com.nelioalves.cursomc.services.ClienteService;
 
 @RestController
-@RequestMapping(value = "/cliente")
+@RequestMapping(value = "/clientes") //plural
 public class ClienteResource {
 	
 	@Autowired // instancia automaricamente o service
