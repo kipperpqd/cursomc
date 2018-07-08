@@ -37,6 +37,7 @@ public class Produto implements Serializable{
 	
 	//com o Set o java garante que não haverá item repetido no pedido
 	// assim o Produto conhece a lista de itens no pedido
+	@JsonIgnore
 	@OneToMany(mappedBy="id.produto")
 	private Set<ItemPedido> itens = new HashSet<>();
 	
@@ -50,6 +51,7 @@ public class Produto implements Serializable{
 		this.preco = preco;
 	}
 	
+	@JsonIgnore
 	public List<Pedido> getPedido(){
 		List<Pedido> lista = new ArrayList<>();
 		for (ItemPedido x : itens) {
